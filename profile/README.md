@@ -43,4 +43,4 @@ Common across all projects in the org:
 
 ## Maintainer
 
-[Werner Dijkerman](https://www.werner-dijkerman.nl) — freelance cloud infrastructure and platform engineer, based in the Netherlands.
+[Werner Dijkerman](https://www.werner-dijkerman.nl); freelance cloud infrastructure and platform engineer, based in the Netherlands.
