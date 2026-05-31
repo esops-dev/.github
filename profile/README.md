@@ -18,9 +18,13 @@ A read-only diagnostic linter for the same clusters — think `kube-bench` and `
 
 `esops-go` and `esops-doctor` are deliberate counterparts: `esops-go` is imperative and may mutate, `esops-doctor` is declarative and never mutates. They share the same config file, so configuring one configures the other.
 
-### promforecast — *predict* *(in development)*
+### [promforecast](https://github.com/esops-dev/promforecast) — *predict*
 
 A self-hosted forecasting service for Prometheus-compatible metrics. Reads a YAML config, runs `statsforecast` models against a long-term TSDB (VictoriaMetrics by default), and exposes predictions as first-class Prometheus metrics — graphable, alertable, indistinguishable from the rest of your monitoring stack. Ships as a Helm chart.
+
+### [promanomaly](https://github.com/esops-dev/promanomaly) — *detect*
+
+A self-hosted anomaly detection service for the same metrics, and the sibling to promforecast. Reads a YAML config, queries a long-term TSDB (VictoriaMetrics by default), runs robust statistical detectors over a rolling window, and exposes anomaly scores on `/metrics`, graphable and alertable like any other metric. Where promforecast catches deviations on signals with learnable seasonality, promanomaly handles everything else: change-points, statistical baselines, and population/cohort divergence. Stateless, cheap per series, and ships as a Helm chart. Run one, both, or neither.
 
 ## Engineering principles
 
